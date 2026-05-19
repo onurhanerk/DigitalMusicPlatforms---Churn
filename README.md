@@ -110,9 +110,20 @@ python plot.py
 Bu işlem sonucunda modellerin F1 skorlarını karşılaştıran grafik oluşturulur.
 
 Proje Yapısı
+```text
+DigitalMusicPlatforms---Churn/
+├── pipeline.p
+├── Create-models.py
+├── plot.py
+├── X_train.csv
+├── X_test.csv
+├── y_train.csv
+├── y_test.csv
+├── model_results.csv
+└── f1_comparison.png
 DigitalMusicPlatforms---Churn/
 │
-├── pipeline.py
+├── pipeline.p
 ├── Create-models.py
 ├── plot.py
 │
@@ -123,34 +134,34 @@ DigitalMusicPlatforms---Churn/
 │
 ├── model_results.csv
 └── f1_comparison.png
-
+```
 Not: Büyük veri dosyaları GitHub’a yüklenmemiş olabilir. Bu durumda KKBOX veri seti ayrıca indirilerek ilgili klasöre yerleştirilmelidir.
 
-Özellik Mühendisliği
+##Özellik Mühendisliği
 
 Projede yalnızca ham veri kullanılmamış, kullanıcı davranışlarını daha anlamlı temsil edebilmek için yeni değişkenler oluşturulmuştur. Bunlardan bazıları şunlardır:
 
-Kullanıcının toplam işlem sayısı
-Farklı ödeme yöntemi sayısı
-Ortalama ödeme planı süresi
-Ortalama ödenen tutar
-Otomatik yenileme oranı
-İptal işlem oranı
-Son işlem tarihi ve üyelik bitiş tarihi arasındaki gün farkı
-Toplam dinleme süresi
-Eşsiz şarkı sayısı
-Tam dinleme oranı
-Şarkı başına ortalama dinleme süresi
-İndirim miktarı
+- Kullanıcının toplam işlem sayısı
+- Farklı ödeme yöntemi sayısı
+- Ortalama ödeme planı süresi
+- Ortalama ödenen tutar
+- Otomatik yenileme oranı
+- İptal işlem oranı
+- Son işlem tarihi ve üyelik bitiş tarihi arasındaki gün farkı
+- Toplam dinleme süresi
+- Eşsiz şarkı sayısı
+- Tam dinleme oranı
+- Şarkı başına ortalama dinleme süresi
+- İndirim miktarı
 
 Bu değişkenler, kullanıcının platformla kurduğu ekonomik ve davranışsal ilişkiyi daha güçlü biçimde temsil etmek için kullanılmıştır.
 
-Değerlendirme
+##Değerlendirme
 
 Bu projede abonelik iptali tahmini bir ikili sınıflandırma problemi olarak ele alınmıştır. Farklı makine öğrenmesi algoritmaları aynı eğitim ve test verileri üzerinde değerlendirilmiş, böylece modellerin performansları karşılaştırmalı olarak incelenmiştir.
 
 Özellikle F1 Score metriği, abonelik iptali tahmini gibi dengesiz sınıf dağılımı görülebilecek problemlerde önemli bir ölçüt olarak değerlendirilmiştir. ROC-AUC metriği ise modelin sınıfları ayırt etme başarısını ölçmek için kullanılmıştır.
 
-Akademik Bağlam
+##Akademik Bağlam
 
 Bu proje, dijital müzik platformlarında kullanıcı kaybı problemini makine öğrenmesi yöntemleriyle incelemektedir. Çalışma, kullanıcı davranışlarının yalnızca geçmiş abonelik durumuyla değil; ödeme alışkanlıkları, işlem geçmişi ve platform kullanım yoğunluğu gibi çok boyutlu değişkenlerle birlikte ele alınması gerektiğini göstermeyi amaçlamaktadır.
